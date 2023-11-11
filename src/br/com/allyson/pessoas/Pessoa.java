@@ -1,14 +1,17 @@
 package br.com.allyson.pessoas;
 
+import java.time.LocalDate;
+import java.time.Period;
+
 import br.com.allyson.compacicao.Endereco;
 
 public class Pessoa {
 	private String nome;
-	private String dataNascimento;
+	private LocalDate dataNascimento;
 	private Endereco endereco;
 	private String telsContato;
 
-	public void cadastrar (String nome, String dataNascimento, Endereco endereco, String telsContato) {
+	public void cadastrar (String nome, LocalDate dataNascimento, Endereco endereco, String telsContato) {
 		 
 			this.nome = nome;
 			this.dataNascimento = dataNascimento;
@@ -18,8 +21,10 @@ public class Pessoa {
 
 	public int obterIdade() {
 		int idade = 0;
-		// Subtrair ano atual de ano de nascimento
-		return idade;
+		// Subtrair data atual de data de nascimento
+		LocalDate dataAtual  = LocalDate.now();
+		Period periodo = Period.between(dataNascimento, dataAtual);
+		return idade = periodo.getYears();
 
 	}
 
@@ -31,11 +36,11 @@ public class Pessoa {
 		this.nome = nome;
 	}
 
-	public String getDateNascimento() {
+	public LocalDate getDateNascimento() {
 		return dataNascimento;
 	}
 
-	public void setDateNascimento(String dateNascimento) {
+	public void setDateNascimento(LocalDate dateNascimento) {
 		this.dataNascimento = dateNascimento;
 	}
 

@@ -1,20 +1,18 @@
 package br.com.allyson.pessoas;
 
+import java.time.LocalDate;
+
 import br.com.allyson.compacicao.Endereco;
 
 public class Cliente extends Pessoa {
 	private String codigo;
 	private String profissao;
 	
-	public void cadastrar (String codigo, String profissao, String nomeCliente, String dataNascimento, Endereco endereco, String telsContato) {
+	public void cadastrar (String nome, String codigo, String profissao, String nomeCliente, LocalDate dataNascimento, Endereco endereco, String telsContato) {
 		this.codigo = codigo;
 		this.profissao = profissao;
-		setNome (nomeCliente);
-		setDateNascimento (dataNascimento);
-		setEndereco (endereco);
-		setTelsContato(telsContato);
+		cadastrar (nome, dataNascimento, endereco, telsContato);
 	}
-		
 	
 	public String getCodigo() {
 		this.codigo = codigo;

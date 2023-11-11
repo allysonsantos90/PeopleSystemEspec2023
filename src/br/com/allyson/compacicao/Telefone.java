@@ -16,7 +16,7 @@ public class Telefone {
 		return DDD;
 	}
 	public void setDDD(String dDD) {
-		DDD = dDD;
+		DDD = DDD;
 	}
 	public String getNumero() {
 		return Numero;

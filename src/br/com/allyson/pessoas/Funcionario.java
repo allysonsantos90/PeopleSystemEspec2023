@@ -1,5 +1,7 @@
 package br.com.allyson.pessoas;
 
+import java.time.LocalDate;
+
 import br.com.allyson.compacicao.Endereco;
 
 public class Funcionario extends Pessoa {
@@ -8,7 +10,7 @@ public class Funcionario extends Pessoa {
 	private double salario;
 	private String dataAdmissao;
 	
-	public void cadastrar (int matricula , String cargo ,double salario, String dataAdmissao, String nome, String dataNascimento, Endereco endereco, String telsContato) {
+	public void cadastrar (int matricula , String cargo ,double salario, String dataAdmissao, String nome, LocalDate dataNascimento, Endereco endereco, String telsContato) {
 		this.matricula = matricula;
 		this.cargo = cargo;
 		this.salario = salario;
